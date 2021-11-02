@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 
-const routingApi = require("./routes/index.js");
+const routingApi = require("./router/index.js");
 const { handleErrors, handleBoomError, logErrors } = require("./middlewares/errors.handler");
 
 const app = express();
