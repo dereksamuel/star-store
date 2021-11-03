@@ -14,6 +14,7 @@ class Product {
         price: +faker.commerce.price(),
         isBlock: faker.datatype.boolean(),
         image: faker.image.cats(),
+        categories: [],
       });
     }
   }
