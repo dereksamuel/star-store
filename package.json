@@ -198,5 +198,8 @@
   "bugs": {
     "url": "https://github.com/dereksamuel/star-store/issues"
   },
-  "homepage": "https://github.com/dereksamuel/star-store#readme"
+  "homepage": "https://github.com/dereksamuel/star-store#readme",
+  "engines": {
+    "node": "14.15.3"
+  }
 }
