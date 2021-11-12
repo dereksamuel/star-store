@@ -14,7 +14,7 @@ class CategoryService {
       });
     }
   }
-  
+
   async create(body) {
     const newCategory = {
       id: faker.datatype.uuid(),
@@ -24,7 +24,7 @@ class CategoryService {
     this.categories.push(newCategory);
     return newCategory;
   }
-  
+
   async find() {
     return this.categories;
   }

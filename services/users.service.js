@@ -17,7 +17,7 @@ class UserService {
       });
     }
   }
-  
+
   async create(body) {
     const newUser = {
       user_id: faker.datatype.uuid(),
@@ -27,7 +27,7 @@ class UserService {
     this.users.push(newUser);
     return newUser;
   }
-  
+
   async find() {
     return this.users;
   }
