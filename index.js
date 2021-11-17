@@ -4,9 +4,10 @@ const cors = require("cors");
 
 const routingApi = require("./router/index.js");
 const { handleErrors, handleBoomError, logErrors } = require("./middlewares/errors.handler");
+const { config } = require("./config/config.js");
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = config.port || 5000;
 const whiteList = [
   "https://jw.org",
   "https://platzi.com",

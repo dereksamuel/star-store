@@ -1,9 +1,15 @@
 const faker = require("faker");
+const { pool } = require("../libs/postgres.pool");
+const { sequelize } = require("../libs/sequelize");
 
 class Product {
   constructor() {
     this.products = [];
     this.init(80);
+    this.pool = pool;
+    this.pool.on("error", (error) => {
+      console.error(error);
+    });
   }
 
   async init(limit = 80) {
@@ -30,7 +36,10 @@ class Product {
   }
 
   async find() {
-    return this.products;
+    // const query = "SELECT * FROM task";
+    const response = await sequelize.models.Product.findAll(); // metadata es contexto del query
+
+    return response;
   }
 
   async findOne(id) {
